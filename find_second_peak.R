@@ -1,4 +1,6 @@
-find_second_peak<- function(Q,first_peak,n_it=400,plot_it=NULL) {
+find_second_peak<- function(Q,first_peak=NULL,n_it=400,plot_it=NULL) {
+    if(is.null(first_peak)) first_peak <- which.max(Q)
+
   speicher=rep(NaN,n_it)
   loc=rep(NaN,n_it)
   start=max(Q)
